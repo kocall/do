@@ -16,11 +16,11 @@ eeooff
 }
 
 boot_server(){
-server_list=("172.16.1.67" "172.16.1.68" "172.16.1.69" "172.16.1.70" "172.16.1.71" "10.30.60.164" "10.30.60.163" "10.30.60.116" "192.168.16.179" "10.30.60.138" "10.30.60.38" "10.30.60.171" "192.168.16.177")
+server_list=("sso-02" "sso-03" "sso-04" "sso-05")
 for target in ${server_list[*]}; do
 echo  "handle ${target}"
 prepare
-#scp ./deploy.sh root@${target}:/root/deploy/deploy.sh	
+scp ./deploy.sh root@${target}:/root/deploy/deploy.sh	
 auth_key
 done
 }
@@ -34,6 +34,6 @@ scp ./deploy_sso.sh root@${target}:/root/deploy/deploy_sso.sh
 auth_key
 done	
 }
-
+boot_server
 sso_server
 
