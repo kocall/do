@@ -1,7 +1,7 @@
 project_name=$1
 project_home="/usr/local/bitmain/${project_name}"
 current_time=$(date +%y%m%d%H%M)
-upload_home=/root/upload
+upload_home=/home/appuser/upload
 if [[ ! -d  ${project_home} ]]; then
         mkdir -p $project_home
 fi

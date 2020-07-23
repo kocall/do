@@ -2,7 +2,7 @@ source /etc/profile
 project_name=$1
 project_home=$SSO_HOME
 current_time=$(date +%y%m%d%H%M)
-upload_home=/root/upload
+upload_home=/home/appuser/upload
 if [[ ! -d  ${project_home}/../backup ]]; then
         mkdir ${project_home}/../backup
 fi
