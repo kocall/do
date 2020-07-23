@@ -26,7 +26,7 @@ done
 }
 
 sso_server(){
-sso_servers=("192.168.16.179")
+sso_servers=("sso-02" "sso-03" "sso-04" "sso-05")
 for target in ${sso_servers[*]}; do
 echo  "handle ${target}"
 #prepare
